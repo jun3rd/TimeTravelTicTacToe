@@ -2,8 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+class Game extends React.Component {
+    render() {
+        return (
+            <div>
+                hello
+            </div>
+        )
+    }
+}
+
 ReactDOM.render(
-    "Game",
+    <Game />,
     document.getElementById('root')
 );
 
