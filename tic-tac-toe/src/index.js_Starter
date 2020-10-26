@@ -1,25 +1,28 @@
+/* starter files */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Square extends React.component {
-    render(i) {
+class Square extends React.Component {
+    render() {
         return (
-            {/* ToDo */}
+        <button className="square">
+            {/* TODO */}
+        </button>
         );
     }
 }
 
-class Board extends React.component {
+class Board extends React.Component {
     renderSquare(i) {
-        return (
-            <Square />
-        );
+        return <Square />;
     }
+
     render() {
+        const status = "Next player: X";
         return (
             <div>
-                <div className="status"></div>
+                <div className="status">{status}</div>
                 <div className="board-row">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
@@ -40,16 +43,16 @@ class Board extends React.component {
     }
 }
 
-class Game extends React.component {
+class Game extends React.Component {
     render() {
         return (
             <div className="game">
                 <div className="game-board">
-                    {/* ToDo */}
+                    <Board />
                 </div>
                 <div className="game-info">
-                    {/* status */}
-                    {/* ToDo */}
+                    <div>{/* status */}</div>
+                    <div>{/* TODO */}</div>
                 </div>
             </div>
         );
@@ -58,17 +61,5 @@ class Game extends React.component {
 
 ReactDOM.render(
     <Game />,
-    document.getElementById('root')
-);
-
-
-// <parts />:
-// square - <button>
-// status - <div>
-// board-row - <div>
-// board-row - <div>
-// board-row - <div>
-// game - <div>
-// game-board - <div>
-// game-info - <div>
-
+    docuemnt.getElementById('root')
+)
